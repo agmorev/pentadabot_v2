@@ -5,7 +5,7 @@ import logging
 
 
 WEBHOOK_HOST = 'https://pentadabot.herokuapp.com/'  # name your app
-WEBHOOK_PATH = '/webhook/'
+WEBHOOK_PATH = 'webhook/'
 WEBHOOK_URL = f"{WEBHOOK_HOST}{WEBHOOK_PATH}"
 
 WEBAPP_HOST = '0.0.0.0'
