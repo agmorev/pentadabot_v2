@@ -1,11 +1,12 @@
 from utils.set_bot_commands import set_default_commands
 import os
 from loader import bot
+from data import config
 import logging
 
 
 WEBHOOK_HOST = 'https://pentadabot.herokuapp.com/'  # name your app
-WEBHOOK_PATH = '/'
+WEBHOOK_PATH = config.BOT_TOKEN
 WEBHOOK_URL = f"{WEBHOOK_HOST}{WEBHOOK_PATH}"
 
 WEBAPP_HOST = '0.0.0.0'
