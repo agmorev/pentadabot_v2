@@ -9,7 +9,7 @@ import re
 
 @dp.message_handler(text="🧮 Калькулятори")
 async def bot_represents(message: types.Message):
-    await message.answer('<b>КАЛЬКУЛЯТОРИ ВАРТОСТІ</b>')
+    await message.answer('<b>КАЛЬКУЛЯТОРИ</b>')
     await message.answer('Оберіть калькулятор для попереднього розрахунку вартості''',
                          reply_markup=calcs_markup)
 
@@ -88,9 +88,9 @@ async def answer_value(message: types.Message, state: FSMContext):
 
 
 
-#Customs value calculation process
-@dp.callback_query_handler(text_contains="customs_calc")
+#Customs payments calculation process
+@dp.callback_query_handler(text_contains="payments_calc")
 async def customs_calculator(call: types.CallbackQuery):
     await call.answer(cache_time=60)
-    await call.message.answer('💵 <b>МИТНА ВАРТІСТЬ</b>')
-    await call.message.answer('❗️Для попереднього розрахунку митної вартості товарів надайте відповіді на наступні питання')
+    await call.message.answer('💵 <b>МИТНІ ПЛАТЕЖІ</b>')
+    await call.message.answer('❗️Для попереднього розрахунку митних платежів заповніть наступну форму')
