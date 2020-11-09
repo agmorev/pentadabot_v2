@@ -6,10 +6,10 @@ import logging
 
 
 WEBHOOK_HOST = 'https://pentadabot.herokuapp.com/'  # name your app
-WEBHOOK_PATH = config.BOT_TOKEN
+WEBHOOK_PATH = os.environ.get('WEBHOOK_PATH')
 WEBHOOK_URL = f"{WEBHOOK_HOST}{WEBHOOK_PATH}"
 
-WEBAPP_HOST = '0.0.0.0'
+WEBAPP_HOST = 'https://pentadabot.herokuapp.com/'
 WEBAPP_PORT = os.environ.get('PORT')
 
 
@@ -28,4 +28,4 @@ if __name__ == '__main__':
     # executor.start_polling(dp, on_startup=on_startup)
     executor.start_webhook(dispatcher=dp, webhook_path=WEBHOOK_PATH,
                   on_startup=on_startup, on_shutdown=on_shutdown,
-                  host=WEBAPP_HOST, port=WEBAPP_PORT)
+                  host=WEBAPP_HOST, port=WEBAPP_PORT,)
