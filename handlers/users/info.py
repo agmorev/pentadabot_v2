@@ -10,7 +10,7 @@ import feedparser
 @dp.message_handler(text="ℹ️ Інфо")
 async def bot_info(message: types.Message):
     await message.answer('<b>ІНФОРМАЦІЙНІ РЕСУРСИ</b>')
-    await message.answer('Новини в митній сфері, зміни в митному законодавстві та законодавство з питань фінансових гарантій''',
+    await message.answer('Новини в митній сфері, зміни в митному законодавстві, законодавство з питань фінансових гарантій, митні класифікатори та сторонні ресурси',
                          reply_markup=info_markup)
 
 @dp.callback_query_handler(text_contains="news")

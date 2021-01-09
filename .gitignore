@@ -141,3 +141,6 @@ dmypy.json
 
 # Other
 documents/
+data/
+data/pentada.db
+*.xlsx
