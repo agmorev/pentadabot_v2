@@ -6,7 +6,7 @@ calcs_markup = InlineKeyboardMarkup(
             InlineKeyboardButton(text="💶 Вартість фінансової гарантії", callback_data='warranty_calc'),
         ],
         [
-            InlineKeyboardButton(text="💵 Розрахунок митних платежів", url='https://www.mdoffice.com.ua/ru/aMDOPayAcc.html'),    
+            InlineKeyboardButton(text="💵 Розмір суми митних платежів", url='http://www.mdoffice.com.ua/pls/MDOffice/payacc.html'),    
         ],
     ],
 )
